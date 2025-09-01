@@ -13,10 +13,13 @@ for i in range(len(lisT)):
        lisT[j], lisT[j+1] = lisT[j+1], lisT[j]
 #ordenamos la lista de forma descedente
 lista_des = lisT.copy()
+#copiamos la lista original para no modificarla 
 for i in range(len(lista_des)):
+    #usamos el "len" para obtener el tamaño de la lista
    for j in range(len(lista_des)-1):
+     #usamos el rango de esta manera porque si dejamos solo el "len" el ultimo elemento no se compara
      if lista_des[j] < lista_des[j+1]:
-        #intercambiamos
+        #comparamos y intercambiamos
         lista_des[j], lista_des[j+1] = lista_des[j+1], lista_des[j]
 
 print("lista Ascendente:", lisT)
